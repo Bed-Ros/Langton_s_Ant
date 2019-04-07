@@ -131,6 +131,7 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="Main.cpp" />
+    <ClCompile Include="StepsAnt.cpp" />
     <ClCompile Include="TileAnt.cpp" />
     <ClCompile Include="TileMap.cpp" />
   </ItemGroup>

@@ -4,8 +4,11 @@ class TileMap : public sf::Drawable, public sf::Transformable
 {
 public:
 
-	bool load(sf::Vector2u tileSize, const sf::Color* tiles_color, unsigned int width, unsigned int height)
+	bool load(sf::Vector2u tileSize, sf::Color** tiles_color, unsigned int width, unsigned int height)
 	{
+		wh = width;
+		colors = tiles_color;
+
 		// изменение размера массива вершин в соответствии с размером уровня
 		m_vertices.setPrimitiveType(sf::Quads);
 		m_vertices.resize(width * height * 4);
@@ -24,14 +27,22 @@ public:
 				quad[1].position = sf::Vector2f(i * tileSize.x, (j + 1) * tileSize.y);
 
 				//присвоить цвет плитке
-				for (int c = 0; c < 4; ++c) {
-					quad[c].color = tiles_color[i + j * width];
-				}
+				set_color(i, j, colors[j][i]);
+				//quad[0].color = sf::Color::Green;
 			}
-
 		return true;
 	}
 
+	void set_color(int x, int y, sf::Color color) {
+		sf::Vertex* quad = &m_vertices[(x + y * wh) * 4];
+		for (int c = 0; c < 4; ++c) {
+			quad[c].color = color;
+		}
+		colors[y][x] = color;
+	}
+
+	sf::Color** colors;
+	unsigned int wh;
 private:
 
 	virtual void draw(sf::RenderTarget& target, sf::RenderStates states) const
@@ -42,6 +53,8 @@ private:
 		// draw the vertex array
 		target.draw(m_vertices, states);
 	}
+
+	
 
 	sf::VertexArray m_vertices;
 };

@@ -1,147 +1,21 @@
 ﻿  Main.cpp
-c:\users\bed_ros\documents\github\langton_s_ant\langton_s_ant\tilemap.cpp(21): warning C4244: аргумент: преобразование "unsigned int" в "T", возможна потеря данных
-          with
-          [
-              T=float
-          ]
-c:\users\bed_ros\documents\github\langton_s_ant\langton_s_ant\tilemap.cpp(22): warning C4244: аргумент: преобразование "unsigned int" в "T", возможна потеря данных
-          with
-          [
-              T=float
-          ]
-c:\users\bed_ros\documents\github\langton_s_ant\langton_s_ant\tilemap.cpp(23): warning C4244: аргумент: преобразование "unsigned int" в "T", возможна потеря данных
-          with
-          [
-              T=float
-          ]
 c:\users\bed_ros\documents\github\langton_s_ant\langton_s_ant\tilemap.cpp(24): warning C4244: аргумент: преобразование "unsigned int" в "T", возможна потеря данных
           with
           [
               T=float
           ]
-c:\users\bed_ros\documents\github\langton_s_ant\langton_s_ant\tileant.cpp(54): warning C4244: аргумент: преобразование "T" в "T", возможна потеря данных
+c:\users\bed_ros\documents\github\langton_s_ant\langton_s_ant\tilemap.cpp(25): warning C4244: аргумент: преобразование "unsigned int" в "T", возможна потеря данных
           with
-          [
-              T=unsigned int
-          ]
-          and
           [
               T=float
           ]
-c:\users\bed_ros\documents\github\langton_s_ant\langton_s_ant\tileant.cpp(55): warning C4244: аргумент: преобразование "T" в "T", возможна потеря данных
+c:\users\bed_ros\documents\github\langton_s_ant\langton_s_ant\tilemap.cpp(26): warning C4244: аргумент: преобразование "unsigned int" в "T", возможна потеря данных
           with
-          [
-              T=unsigned int
-          ]
-          and
           [
               T=float
           ]
-c:\users\bed_ros\documents\github\langton_s_ant\langton_s_ant\tileant.cpp(56): warning C4244: аргумент: преобразование "T" в "T", возможна потеря данных
+c:\users\bed_ros\documents\github\langton_s_ant\langton_s_ant\tilemap.cpp(27): warning C4244: аргумент: преобразование "unsigned int" в "T", возможна потеря данных
           with
-          [
-              T=unsigned int
-          ]
-          and
-          [
-              T=float
-          ]
-c:\users\bed_ros\documents\github\langton_s_ant\langton_s_ant\tileant.cpp(57): warning C4244: аргумент: преобразование "T" в "T", возможна потеря данных
-          with
-          [
-              T=unsigned int
-          ]
-          and
-          [
-              T=float
-          ]
-c:\users\bed_ros\documents\github\langton_s_ant\langton_s_ant\tileant.cpp(63): warning C4244: аргумент: преобразование "T" в "T", возможна потеря данных
-          with
-          [
-              T=unsigned int
-          ]
-          and
-          [
-              T=float
-          ]
-c:\users\bed_ros\documents\github\langton_s_ant\langton_s_ant\tileant.cpp(65): warning C4244: аргумент: преобразование "T" в "T", возможна потеря данных
-          with
-          [
-              T=unsigned int
-          ]
-          and
-          [
-              T=float
-          ]
-c:\users\bed_ros\documents\github\langton_s_ant\langton_s_ant\tileant.cpp(66): warning C4244: аргумент: преобразование "T" в "T", возможна потеря данных
-          with
-          [
-              T=unsigned int
-          ]
-          and
-          [
-              T=float
-          ]
-c:\users\bed_ros\documents\github\langton_s_ant\langton_s_ant\tileant.cpp(69): warning C4244: аргумент: преобразование "T" в "T", возможна потеря данных
-          with
-          [
-              T=unsigned int
-          ]
-          and
-          [
-              T=float
-          ]
-c:\users\bed_ros\documents\github\langton_s_ant\langton_s_ant\tileant.cpp(70): warning C4244: аргумент: преобразование "T" в "T", возможна потеря данных
-          with
-          [
-              T=unsigned int
-          ]
-          and
-          [
-              T=float
-          ]
-c:\users\bed_ros\documents\github\langton_s_ant\langton_s_ant\tileant.cpp(71): warning C4244: аргумент: преобразование "T" в "T", возможна потеря данных
-          with
-          [
-              T=unsigned int
-          ]
-          and
-          [
-              T=float
-          ]
-c:\users\bed_ros\documents\github\langton_s_ant\langton_s_ant\tileant.cpp(75): warning C4244: аргумент: преобразование "T" в "T", возможна потеря данных
-          with
-          [
-              T=unsigned int
-          ]
-          and
-          [
-              T=float
-          ]
-c:\users\bed_ros\documents\github\langton_s_ant\langton_s_ant\tileant.cpp(76): warning C4244: аргумент: преобразование "T" в "T", возможна потеря данных
-          with
-          [
-              T=unsigned int
-          ]
-          and
-          [
-              T=float
-          ]
-c:\users\bed_ros\documents\github\langton_s_ant\langton_s_ant\tileant.cpp(78): warning C4244: аргумент: преобразование "T" в "T", возможна потеря данных
-          with
-          [
-              T=unsigned int
-          ]
-          and
-          [
-              T=float
-          ]
-c:\users\bed_ros\documents\github\langton_s_ant\langton_s_ant\tileant.cpp(82): warning C4244: аргумент: преобразование "T" в "T", возможна потеря данных
-          with
-          [
-              T=unsigned int
-          ]
-          and
           [
               T=float
           ]
@@ -163,5 +37,130 @@ c:\users\bed_ros\documents\github\langton_s_ant\langton_s_ant\tileant.cpp(84): w
           [
               T=float
           ]
-c:\users\bed_ros\documents\github\langton_s_ant\langton_s_ant\main.cpp(55): warning C4390: ";": обнаружен пустой контролируемый оператор; это правильно?
+c:\users\bed_ros\documents\github\langton_s_ant\langton_s_ant\tileant.cpp(85): warning C4244: аргумент: преобразование "T" в "T", возможна потеря данных
+          with
+          [
+              T=unsigned int
+          ]
+          and
+          [
+              T=float
+          ]
+c:\users\bed_ros\documents\github\langton_s_ant\langton_s_ant\tileant.cpp(86): warning C4244: аргумент: преобразование "T" в "T", возможна потеря данных
+          with
+          [
+              T=unsigned int
+          ]
+          and
+          [
+              T=float
+          ]
+c:\users\bed_ros\documents\github\langton_s_ant\langton_s_ant\tileant.cpp(95): warning C4244: аргумент: преобразование "T" в "T", возможна потеря данных
+          with
+          [
+              T=unsigned int
+          ]
+          and
+          [
+              T=float
+          ]
+c:\users\bed_ros\documents\github\langton_s_ant\langton_s_ant\tileant.cpp(97): warning C4244: аргумент: преобразование "T" в "T", возможна потеря данных
+          with
+          [
+              T=unsigned int
+          ]
+          and
+          [
+              T=float
+          ]
+c:\users\bed_ros\documents\github\langton_s_ant\langton_s_ant\tileant.cpp(98): warning C4244: аргумент: преобразование "T" в "T", возможна потеря данных
+          with
+          [
+              T=unsigned int
+          ]
+          and
+          [
+              T=float
+          ]
+c:\users\bed_ros\documents\github\langton_s_ant\langton_s_ant\tileant.cpp(101): warning C4244: аргумент: преобразование "T" в "T", возможна потеря данных
+          with
+          [
+              T=unsigned int
+          ]
+          and
+          [
+              T=float
+          ]
+c:\users\bed_ros\documents\github\langton_s_ant\langton_s_ant\tileant.cpp(102): warning C4244: аргумент: преобразование "T" в "T", возможна потеря данных
+          with
+          [
+              T=unsigned int
+          ]
+          and
+          [
+              T=float
+          ]
+c:\users\bed_ros\documents\github\langton_s_ant\langton_s_ant\tileant.cpp(103): warning C4244: аргумент: преобразование "T" в "T", возможна потеря данных
+          with
+          [
+              T=unsigned int
+          ]
+          and
+          [
+              T=float
+          ]
+c:\users\bed_ros\documents\github\langton_s_ant\langton_s_ant\tileant.cpp(107): warning C4244: аргумент: преобразование "T" в "T", возможна потеря данных
+          with
+          [
+              T=unsigned int
+          ]
+          and
+          [
+              T=float
+          ]
+c:\users\bed_ros\documents\github\langton_s_ant\langton_s_ant\tileant.cpp(108): warning C4244: аргумент: преобразование "T" в "T", возможна потеря данных
+          with
+          [
+              T=unsigned int
+          ]
+          and
+          [
+              T=float
+          ]
+c:\users\bed_ros\documents\github\langton_s_ant\langton_s_ant\tileant.cpp(110): warning C4244: аргумент: преобразование "T" в "T", возможна потеря данных
+          with
+          [
+              T=unsigned int
+          ]
+          and
+          [
+              T=float
+          ]
+c:\users\bed_ros\documents\github\langton_s_ant\langton_s_ant\tileant.cpp(114): warning C4244: аргумент: преобразование "T" в "T", возможна потеря данных
+          with
+          [
+              T=unsigned int
+          ]
+          and
+          [
+              T=float
+          ]
+c:\users\bed_ros\documents\github\langton_s_ant\langton_s_ant\tileant.cpp(115): warning C4244: аргумент: преобразование "T" в "T", возможна потеря данных
+          with
+          [
+              T=unsigned int
+          ]
+          and
+          [
+              T=float
+          ]
+c:\users\bed_ros\documents\github\langton_s_ant\langton_s_ant\tileant.cpp(116): warning C4244: аргумент: преобразование "T" в "T", возможна потеря данных
+          with
+          [
+              T=unsigned int
+          ]
+          and
+          [
+              T=float
+          ]
   Langton_s_Ant.vcxproj -> C:\Users\Bed_Ros\Documents\GitHub\Langton_s_Ant\Debug\Langton_s_Ant.exe

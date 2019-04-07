@@ -4,7 +4,7 @@ class TileAnt : public sf::Drawable, public sf::Transformable
 {
 public:
 
-	bool load(const std::string& tileset, sf::Vector2u textureSize, sf::Vector2u tileSize, sf::Vector2u location = sf::Vector2u(0, 0), std::string direction = "up")
+	bool load(const std::string& tileset, sf::Vector2u tileSize, sf::Vector2u location = sf::Vector2u(0, 0), std::string direction = "up")
 	{
 		// загрузка файла текстур
 		if (!a_tileset.loadFromFile(tileset))
@@ -15,7 +15,6 @@ public:
 		//
 		a_location = location;
 		a_tile_size = tileSize;
-		a_texture_size = textureSize;
 		//назначение первоначальной позиции
 		update_location();
 		//назначение первоначальной текстуры
@@ -48,6 +47,36 @@ public:
 		update_texture("right");
 	}
 
+	void turn(std::string direction) {
+		if (direction == "left") {
+			if (a_direction == "up") go_left();
+			else if (a_direction == "down") go_right();
+			else if (a_direction == "left") go_down();
+			else if (a_direction == "right") go_up();
+		}
+		else if (direction == "right") {
+			if (a_direction == "up") go_right();
+			else if (a_direction == "down") go_left();
+			else if (a_direction == "left") go_up();
+			else if (a_direction == "right") go_down();
+		}
+		else if (direction == "forward") {
+			if (a_direction == "up") go_up();
+			else if (a_direction == "down") go_down();
+			else if (a_direction == "left") go_left();
+			else if (a_direction == "right") go_right();
+		}
+		else if (direction == "backward") {
+			if (a_direction == "up") go_down();
+			else if (a_direction == "down") go_up();
+			else if (a_direction == "left") go_right();
+			else if (a_direction == "right") go_left();
+		}
+	}
+
+		int x;
+		int y;
+
 private:
 
 	void update_location() {
@@ -55,33 +84,36 @@ private:
 		a_vertices[1].position = sf::Vector2f((a_location.x + 1) * a_tile_size.x, a_location.y * a_tile_size.y);
 		a_vertices[2].position = sf::Vector2f((a_location.x + 1) * a_tile_size.x, (a_location.y + 1) * a_tile_size.y);
 		a_vertices[3].position = sf::Vector2f(a_location.x * a_tile_size.x, (a_location.y + 1) * a_tile_size.y);
+		x = a_location.x;
+		y = a_location.y;
 	}
 
 	void update_texture(std::string direction) {
-
+		sf::Vector2u texture_size = a_tileset.getSize();
+		a_direction = direction;
 		if (direction == "right") {
-			a_vertices[0].texCoords = sf::Vector2f(0, a_texture_size.y);
+			a_vertices[0].texCoords = sf::Vector2f(0, texture_size.y);
 			a_vertices[1].texCoords = sf::Vector2f(0, 0);
-			a_vertices[2].texCoords = sf::Vector2f(a_texture_size.x, 0);
-			a_vertices[3].texCoords = sf::Vector2f(a_texture_size.x, a_texture_size.y);			
+			a_vertices[2].texCoords = sf::Vector2f(texture_size.x, 0);
+			a_vertices[3].texCoords = sf::Vector2f(texture_size.x, texture_size.y);
 		}
-		else if (direction == "left") {			
-			a_vertices[0].texCoords = sf::Vector2f(a_texture_size.x, 0);
-			a_vertices[1].texCoords = sf::Vector2f(a_texture_size.x, a_texture_size.y);
-			a_vertices[2].texCoords = sf::Vector2f(0, a_texture_size.y);
+		else if (direction == "left") {
+			a_vertices[0].texCoords = sf::Vector2f(texture_size.x, 0);
+			a_vertices[1].texCoords = sf::Vector2f(texture_size.x, texture_size.y);
+			a_vertices[2].texCoords = sf::Vector2f(0, texture_size.y);
 			a_vertices[3].texCoords = sf::Vector2f(0, 0);
 		}
-		else if (direction == "down") {			
-			a_vertices[0].texCoords = sf::Vector2f(a_texture_size.x, a_texture_size.y);
-			a_vertices[1].texCoords = sf::Vector2f(0, a_texture_size.y);
+		else if (direction == "down") {
+			a_vertices[0].texCoords = sf::Vector2f(texture_size.x, texture_size.y);
+			a_vertices[1].texCoords = sf::Vector2f(0, texture_size.y);
 			a_vertices[2].texCoords = sf::Vector2f(0, 0);
-			a_vertices[3].texCoords = sf::Vector2f(a_texture_size.x, 0);
+			a_vertices[3].texCoords = sf::Vector2f(texture_size.x, 0);
 		}
 		else { // по умолчанию up
 			a_vertices[0].texCoords = sf::Vector2f(0, 0);
-			a_vertices[1].texCoords = sf::Vector2f(a_texture_size.x, 0);
-			a_vertices[2].texCoords = sf::Vector2f(a_texture_size.x, a_texture_size.y);
-			a_vertices[3].texCoords = sf::Vector2f(0, a_texture_size.y);
+			a_vertices[1].texCoords = sf::Vector2f(texture_size.x, 0);
+			a_vertices[2].texCoords = sf::Vector2f(texture_size.x, texture_size.y);
+			a_vertices[3].texCoords = sf::Vector2f(0, texture_size.y);
 		}
 	}
 
@@ -100,7 +132,7 @@ private:
 	sf::VertexArray a_vertices;
 	sf::Texture a_tileset;
 	sf::Vector2u a_location;
-	sf::Vector2u a_texture_size;
 	sf::Vector2u a_tile_size;
+	std::string a_direction;
 
-};
+	};
