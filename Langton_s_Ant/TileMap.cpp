@@ -4,10 +4,12 @@ class TileMap : public sf::Drawable, public sf::Transformable
 {
 public:
 
-	bool load(sf::Vector2u tileSize, sf::Color** tiles_color, unsigned int width, unsigned int height)
+	TileMap(sf::Vector2u tile_size, std::vector<std::vector<sf::Color>> tiles_color) 
 	{
-		wh = width;
-		colors = tiles_color;
+		m_colors = tiles_color;
+
+		int width = m_colors.size();
+		int	height = m_colors[0].size();
 
 		// изменение размера массива вершин в соответствии с размером уровня
 		m_vertices.setPrimitiveType(sf::Quads);
@@ -21,29 +23,32 @@ public:
 				sf::Vertex* quad = &m_vertices[(i + j * width) * 4];
 
 				// определить его 4 угла
-				quad[0].position = sf::Vector2f(i * tileSize.x, j * tileSize.y);
-				quad[3].position = sf::Vector2f((i + 1) * tileSize.x, j * tileSize.y);
-				quad[2].position = sf::Vector2f((i + 1) * tileSize.x, (j + 1) * tileSize.y);
-				quad[1].position = sf::Vector2f(i * tileSize.x, (j + 1) * tileSize.y);
+				quad[0].position = sf::Vector2f(i * tile_size.x, j * tile_size.y);
+				quad[3].position = sf::Vector2f((i + 1) * tile_size.x, j * tile_size.y);
+				quad[2].position = sf::Vector2f((i + 1) * tile_size.x, (j + 1) * tile_size.y);
+				quad[1].position = sf::Vector2f(i * tile_size.x, (j + 1) * tile_size.y);
 
 				//присвоить цвет плитке
-				set_color(i, j, colors[j][i]);
-				//quad[0].color = sf::Color::Green;
+				set_color(i, j, m_colors[i][j]);
 			}
-		return true;
 	}
 
 	void set_color(int x, int y, sf::Color color) {
-		sf::Vertex* quad = &m_vertices[(x + y * wh) * 4];
+		int width = m_colors.size();
+		sf::Vertex* quad = &m_vertices[(x + y * width) * 4];
 		for (int c = 0; c < 4; ++c) {
 			quad[c].color = color;
 		}
-		colors[y][x] = color;
+		m_colors[x][y] = color;
 	}
 
-	sf::Color** colors;
-	unsigned int wh;
+	sf::Color get_color(int x, int y) {
+		return m_colors[x][y];
+	}
+
 private:
+	sf::VertexArray m_vertices;
+	std::vector<std::vector<sf::Color>> m_colors;
 
 	virtual void draw(sf::RenderTarget& target, sf::RenderStates states) const
 	{
@@ -53,8 +58,4 @@ private:
 		// draw the vertex array
 		target.draw(m_vertices, states);
 	}
-
-	
-
-	sf::VertexArray m_vertices;
 };
