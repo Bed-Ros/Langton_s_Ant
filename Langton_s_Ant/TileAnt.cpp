@@ -4,11 +4,10 @@ class TileAnt : public sf::Drawable, public sf::Transformable
 {
 public:
 
-	bool load(const std::string& tileset, sf::Vector2u tileSize, sf::Vector2u location = sf::Vector2u(0, 0), std::string direction = "up")
+	TileAnt(const std::string& tileset, sf::Vector2u tileSize, sf::Vector2u location = sf::Vector2u(0, 0), std::string direction = "up")
 	{
 		// загрузка файла текстур
-		if (!a_tileset.loadFromFile(tileset))
-			return false;
+		a_tileset.loadFromFile(tileset);
 
 		a_vertices.setPrimitiveType(sf::Quads);
 		a_vertices.resize(4);
@@ -19,8 +18,6 @@ public:
 		update_location();
 		//назначение первоначальной текстуры
 		update_texture(direction);
-
-		return true;
 	}
 
 	void go_up() {
